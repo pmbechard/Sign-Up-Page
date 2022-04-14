@@ -17,6 +17,13 @@ body {
     src: url(fonts/Satisfy-Regular.ttf);
 }
 
+@font-face {
+    font-family: inter;
+    src: url(fonts/Inter-Regular.ttf);
+}
+
+/* LEFT AREA */
+
 .body-left {
     background-image: url("images/body-left-bg.jpg");
     background-position: center;
@@ -53,13 +60,45 @@ body {
     width: 30vw;
     background-color: rgb(0, 0, 0, 0.3);
     color: rgb(189, 189, 189);
+    font-family: inter, sans-serif;
 }
 
 .body-left > small > a {
     color: rgb(189, 189, 189);
+    font-family: inter, sans-serif;
 }
 
+
+
+/* RIGHT AREA */
 .body-right {
-    background-color: rgb(225, 223, 231);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(252, 249, 255);
     width: 50vw;
+    font-family: inter, sans-serif;
+}
+
+.sign-up-card {
+    padding: 20px 40px;
+    background-color: #fff;
+    box-shadow: 0px 1px 3px .1px rgba(0, 0, 0, 0.5);
+    margin: 10px 0;
+}
+
+p:first-child {
+    font-size: 24px;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20%;
+}
+
+li {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
 }
