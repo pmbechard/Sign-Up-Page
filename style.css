@@ -88,7 +88,12 @@ body {
 }
 
 p:first-child {
-    font-size: 24px;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.call-to-action {
+    margin: 20px 40px;
 }
 
 ul {
@@ -101,4 +106,29 @@ li {
     list-style: none;
     display: flex;
     flex-direction: column;
+    margin: 10px 0;
+    color: rgb(78, 78, 78);
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+li > input {
+    height: 25px;
+    width: 150%;
+}
+
+button {
+    margin: 20px 40px;
+    width: 30%;
+    height: 40px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(49, 49, 94);
+    color: white;
+}
+
+.log-in {
+    margin: 20px 40px;
+    font-size: 12px;
 }
