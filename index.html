@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <div class="body-left">
@@ -49,16 +49,16 @@
                     <li>
                         <label for="tel">Tel.</label>
                         <input type="tel" name="tel" id="tel" placeholder=" " pattern="[+]?[0-9]?[0-9]?[-|\s]?[\(]?[0-9]{3}[\)]?[-|\s]?[0-9]{3,4}[-|\s]?[0-9]{4}" required>
-                        <p class="warning-label">Please enter a valid 10-digit phone number.</p>
+                        <p class="warning-label">Please enter a valid 10-or 11-digit phone number.</p>
                     </li>
                     <li>
                         <label for="pwd">Password</label>
                         <input type="password" name="pwd" id="pwd" placeholder=" " pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\-@$!%*?&])[A-Za-z\d\-@$!%*?&]{8,}$" title="8+ characters with at least one of uppercase, lowercase, numbers, and special characters." required>
-                        <p class="warning-label">Password must be SPECIFICATIONS</p>
+                        <p class="warning-label">Password must be 8+ characters with at least one of uppercase, lowercase, numbers, and special characters</p>
                     </li>
                     <li>
                         <label for="confirm-pwd">Confirm password</label>
-                        <input type="password" name="confirm-pwd" id="confirm-pwd" placeholder=" " pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\-@$!%*?&])[A-Za-z\d\-@$!%*?&]{8,}$" required>
+                        <input type="password" name="confirm-pwd" id="confirm-pwd" placeholder=" " required>
                         <p class="warning-label">Password must match previous field.</p>
                     </li>
                 </ul>
