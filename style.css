@@ -7,9 +7,9 @@
 body {
     display: flex;
     justify-content: center;
+    background-color: black;
     height: 100vh;
     width: 100vw;
-    background-color: black;
 }
 
 @font-face {
@@ -100,7 +100,8 @@ p:first-child {
 ul {
     display: flex;
     flex-wrap: wrap;
-    gap: 20%;
+    gap: 10%;
+    width: 100%;
 }
 
 li {
@@ -112,11 +113,12 @@ li {
     text-transform: uppercase;
     font-size: 10px;
     letter-spacing: 1px;
+    width: max(30%, 150px);
 }
 
 li > input {
     height: 25px;
-    width: 150%;
+    width: 100%;
 }
 
 button {
@@ -132,4 +134,34 @@ button {
 .log-in {
     margin: 10px 50px;
     font-size: 12px;
+}
+
+@media only screen and (max-width: 1000px) {
+    body {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .body-left,
+    .body-right {
+        width: 100vw;
+    }
+
+    .body-left {
+        height: 30vh;
+    }
+
+    .body-left > .company-header {
+        height: 10vh;
+        margin-top: 10vh;
+    }
+
+    .body-left > small {
+        position: absolute;
+        right: 0;
+        top: 28.5vh;
+        height: 1.5vh;
+        width: 100vw;
+        font-size: 8px;
+    }
 }
