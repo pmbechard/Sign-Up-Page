@@ -27,37 +27,44 @@
             </p>
         </div>
 
-        <div class="sign-up-card">
-            <p>Provide the following details for us and we'll get you going today.</p>
-            <ul>
-                <li>
-                    <label for="first-name">First name</label>
-                    <input type="text" name="first-name" id="first-name">
-                </li>
-                <li>
-                    <label for="last-name">Last name</label>
-                    <input type="text" name="last-name" id="last-name">
-                </li>
-                <li>
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email">
-                </li>
-                <li>
-                    <label for="tel">Tel.</label>
-                    <input type="tel" name="tel" id="tel">
-                </li>
-                <li>
-                    <label for="pwd">Password</label>
-                    <input type="password" name="pwd" id="pwd">
-                </li>
-                <li>
-                    <label for="confirm-pwd">Confirm password</label>
-                    <input type="password" name="confirm-pwd" id="confirm-pwd">
-                </li>
-            </ul>
-        </div>
+        <!-- <form action="http://httpbin.org/post" method="post"> -->
+        <form action="#" method="post">
+            <div class="sign-up-card">
+                <p>Provide the following details for us and we'll get you going today.</p>
+                <ul>
+                    <li>
+                        <label for="first-name">First name</label>
+                        <input type="text" name="first-name" id="first-name" placeholder=" " required>
+                    </li>
+                    <li>
+                        <label for="last-name">Last name</label>
+                        <input type="text" name="last-name" id="last-name" placeholder=" " required>
+                    </li>
+                    <li>
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder=" " required>
+                        <p class="warning-label">Please enter a valid email address.</p>
+                    </li>
+                    <li>
+                        <label for="tel">Tel.</label>
+                        <input type="tel" name="tel" id="tel" placeholder=" " pattern="[+]?[0-9]?[0-9]?[-|\s]?[\(]?[0-9]{3}[\)]?[-|\s]?[0-9]{3,4}[-|\s]?[0-9]{4}" required>
+                        <p class="warning-label">Please enter a valid 10-digit phone number.</p>
+                    </li>
+                    <li>
+                        <label for="pwd">Password</label>
+                        <input type="password" name="pwd" id="pwd" placeholder=" " required>
+                        <p class="warning-label">Password must be SPECIFICATIONS</p>
+                    </li>
+                    <li>
+                        <label for="confirm-pwd">Confirm password</label>
+                        <input type="password" name="confirm-pwd" id="confirm-pwd" placeholder=" " required>
+                        <p class="warning-label">Password must match previous field.</p>
+                    </li>
+                </ul>
+            </div>
 
-        <button>Create Account</button>
+            <button type="submit">Create Account</button>
+        </form>
 
         <p class="log-in">Already have an account? <a href="#">Log in</a></p>
 

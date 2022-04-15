@@ -1,3 +1,23 @@
+
+@font-face {
+    font-family: satisfy;
+    src: url(fonts/Satisfy-Regular.ttf);
+}
+
+@font-face {
+    font-family: inter;
+    src: url(fonts/Inter-Regular.ttf);
+}
+
+@font-face {
+    font-family: inter-bold;
+    src: url(fonts/Inter-Bold.ttf);
+}
+
+:root {
+    --error-visible: hidden;
+}
+
 * {
     padding: 0;
     margin: 0; 
@@ -10,16 +30,6 @@ body {
     background-color: black;
     height: 100vh;
     width: 100vw;
-}
-
-@font-face {
-    font-family: satisfy;
-    src: url(fonts/Satisfy-Regular.ttf);
-}
-
-@font-face {
-    font-family: inter;
-    src: url(fonts/Inter-Regular.ttf);
 }
 
 /* LEFT AREA */
@@ -89,6 +99,7 @@ body {
 }
 
 p:first-child {
+    font-family: inter-bold;
     font-size: 18px;
     margin-bottom: 20px;
 }
@@ -105,6 +116,7 @@ ul {
 }
 
 li {
+    position: relative;
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -119,6 +131,32 @@ li {
 li > input {
     height: 25px;
     width: 100%;
+    border: 1px solid rgb(78, 78, 78);
+    border-radius: 3px;
+    padding: 0 5px;
+}
+
+input + p {
+    color: rgb(172, 54, 54);
+    font-size: 7px;
+    position: absolute;
+    top: 40px;
+    width: 150%;
+    visibility: var(--error-visible);
+}
+
+input:invalid:not(:focus):not(:placeholder-shown) {
+    background-color: rgba(172, 54, 54, 0.2);
+    border: 1px solid rgb(78, 78, 78);
+    border-radius: 3px;
+    --error-visible: visible;
+}
+
+input:valid:not(:focus):not(:placeholder-shown) {
+    background-color: rgba(54, 172, 84, 0.2);
+    border: 1px solid rgb(78, 78, 78);
+    border-radius: 3px;
+    --error-visible: visible;
 }
 
 button {
@@ -161,7 +199,8 @@ button {
         right: 0;
         top: 28.5vh;
         height: 1.5vh;
-        width: 100vw;
+        width: auto;
         font-size: 8px;
+        padding: 1px 3px;
     }
 }
