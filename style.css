@@ -61,6 +61,7 @@ body {
     background-color: rgb(0, 0, 0, 0.3);
     color: rgb(189, 189, 189);
     font-family: inter, sans-serif;
+    font-size: 10px;
 }
 
 .body-left > small > a {
@@ -119,7 +120,7 @@ li > input {
 }
 
 button {
-    margin: 20px 40px;
+    margin: 20px 40px 10px;
     width: 30%;
     height: 40px;
     border: none;
@@ -129,6 +130,6 @@ button {
 }
 
 .log-in {
-    margin: 20px 40px;
+    margin: 10px 50px;
     font-size: 12px;
 }
