@@ -156,7 +156,7 @@ input:valid:not(:focus):not(:placeholder-shown) {
     background-color: rgba(54, 172, 84, 0.2);
     border: 1px solid rgb(78, 78, 78);
     border-radius: 3px;
-    --error-visible: visible;
+    --error-visible: hidden;
 }
 
 button {
