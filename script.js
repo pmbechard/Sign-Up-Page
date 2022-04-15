@@ -30,6 +30,8 @@ password.addEventListener('focusout', () => {
         } else {
             confirmPassword.style.backgroundColor = 'rgba(172, 54, 54, 0.2)';
         }
+    } else {
+        confirmPassword.style.backgroundColor = '#fff';
     }
 });
 confirmPassword.addEventListener('focusout', () => {
@@ -39,5 +41,7 @@ confirmPassword.addEventListener('focusout', () => {
         } else {
             confirmPassword.style.backgroundColor = 'rgba(172, 54, 54, 0.2)';
         }
+    } else {
+        confirmPassword.style.backgroundColor = '#fff';
     }
 });
