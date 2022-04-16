@@ -9,11 +9,13 @@ Created on 15 Apr 2022
 const inputs = document.querySelectorAll('input');
 inputs.forEach( (input) => {
     input.addEventListener('focusout', () => {
-        const warning = input.nextElementSibling;
-        if (input.matches(':invalid:not(:focus):not(:placeholder-shown)')) {
-            warning.style.visibility = 'visible';
-        } else {
-            warning.style.visibility = 'hidden';
+        if (input.nextElementSibling) {
+            const warning = input.nextElementSibling;
+            if (input.matches(':invalid:not(:focus):not(:placeholder-shown)')) {
+                warning.style.visibility = 'visible';
+            } else {
+                warning.style.visibility = 'hidden';
+            }
         }
     });
 });
@@ -29,6 +31,7 @@ password.addEventListener('focusout', () => {
             confirmPassword.style.backgroundColor = 'rgba(54, 172, 84, 0.2)';
         } else {
             confirmPassword.style.backgroundColor = 'rgba(172, 54, 54, 0.2)';
+            confirmPassword.nextElementSibling.style.visibility = 'visible';
         }
     } else {
         confirmPassword.style.backgroundColor = '#fff';
@@ -40,6 +43,7 @@ confirmPassword.addEventListener('focusout', () => {
             confirmPassword.style.backgroundColor = 'rgba(54, 172, 84, 0.2)';
         } else {
             confirmPassword.style.backgroundColor = 'rgba(172, 54, 54, 0.2)';
+            confirmPassword.nextElementSibling.style.visibility = 'visible';
         }
     } else {
         confirmPassword.style.backgroundColor = '#fff';
